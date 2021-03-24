@@ -1,17 +1,18 @@
 import React from 'react'
+import withLoader from '../HOC/withLoader';
 import CourseCard from '../Molecules/CourseCard'
 
-// Data
-import { courses } from '../../Data'
 
-const CourseGrid = () => (
+const CourseGrid = ({ courses }) => (
     <div className="ed-grid m-grid-4">
         {
-            courses.map( ({ id, title, image, price, professor }) => (
-                <CourseCard id={id} key={id} title={title} image={image} price={price} professor={professor} />)
+            courses.map(({ id, title, image, price, professor }) => (
+                <CourseCard key={id} id={id} title={title} image={image} price={price} professor={professor} />)
             )
         }
     </div>
 )
 
-export default CourseGrid;
+
+
+export default withLoader("courses")(CourseGrid);

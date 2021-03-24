@@ -47,7 +47,7 @@ class User extends Component {
                             <p className="m-cols-2">Website: {this.state.website}</p>
                         </>)
                         : (<>
-                            <h1 className="m-cols-3">Usuario no existe</h1>
+                            <h1 className="m-cols-3">Cargando...</h1>
                         </>)
                 }
 
