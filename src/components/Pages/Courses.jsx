@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import CourseGrid from '../Organisms/CourseGrid'
 
-// Data
-//import { courses } from '../../Data'
-
 class Courses extends Component {
     constructor(props) {
         super(props)
